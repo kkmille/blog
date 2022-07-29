@@ -45,8 +45,9 @@ I ended up selecting Hugo for its simplicity, performance and numerous themes/pl
 RTFM
 
 ## Deploying the website on AWS
-I wanted to take this opportunity to experiment with various AWS services so I decided to try deploying the website on multiple compute platforms, namely:
+I wanted to take this opportunity to experiment with various AWS services so I decided to try deploying the website on multiple compute platforms meant for static websites, namely:
 - `Amazon S3` using Hugo Deploy (https://gohugo.io/hosting-and-deployment/hugo-deploy/)
+    - Follow hugo deploy
+    - Set up a CloudFront distribution (with the proper security features such as ACM, WAF and OAI) and a custom domain name
+    - Set up CD pipeline (CodeDeploy hooked to a Git web hook?)
 - `AWS Amplify` (https://gohugo.io/hosting-and-deployment/hosting-on-aws-amplify/)
-- EC2 (makes sense?)
-- Containers (makes sense?)
