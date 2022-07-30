@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>My Journey to the Cloud</title>
+    <link>/</link>
+    <description>Recent content on My Journey to the Cloud</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Thu, 28 Jul 2022 00:00:00 +0000</lastBuildDate><atom:link href="/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Getting my website up and running</title>
+      <link>/posts/personal-website/</link>
+      <pubDate>Thu, 28 Jul 2022 00:00:00 +0000</pubDate>
+      
+      <guid>/posts/personal-website/</guid>
+      <description>Tasks # Find and register a good domain name Choose the right framework Create the skeleton and a few first posts GitHub Deploy the website on AWS Choosing a domain name # I wanted to find a domain name that&amp;rsquo;s both self-explanatory and easy to remember.</description>
+    </item>
+    
+    <item>
+      <title>Kick-starting the journey</title>
+      <link>/posts/kick-start/</link>
+      <pubDate>Mon, 18 Jul 2022 13:47:03 +0800</pubDate>
+      
+      <guid>/posts/kick-start/</guid>
+      <description>Steps</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>/about/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/about/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>
