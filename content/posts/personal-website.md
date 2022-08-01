@@ -61,8 +61,7 @@ I wanted to take this opportunity to experiment with various AWS services so I d
 
 ### Using S3 and CloudFront
 
-TBD
-
+Here is a simple diagram detailing the architecture and deployment pipeline
 ![Architecture diagram](/camille-cloud-blog.png)
 
 ### Using Amplify
