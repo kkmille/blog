@@ -63,7 +63,7 @@ I wanted to take this opportunity to experiment with various AWS services so I d
 
 TBD
 
-![Architecture diagram](/static/camille-cloud-blog.png)
+![Architecture diagram](/camille-cloud-blog.png)
 
 ### Using Amplify
 
