@@ -3,13 +3,16 @@ title: "Getting my website up and running"
 date: 2022-07-28
 draft: false
 ---
-
-## Tasks
-1. Find and register a good domain name
-2. Choose the right framework
-3. Create the skeleton and a few first posts
-4. GitHub
-5. Deploy the website on AWS
+**Table of Contents**
+- [Choosing a domain name](#choosing-a-domain-name)
+- [Registering a domain name and setting up a public hosted zone in Route 53](#registering-a-domain-name-and-setting-up-a-public-hosted-zone-in-route-53)
+  - [Registration](#registration)
+  - [Hosted zones](#hosted-zones)
+- [Choosing a framework to host a static website](#choosing-a-framework-to-host-a-static-website)
+- [Installing and configuring Hugo](#installing-and-configuring-hugo)
+- [Deploying the website on AWS](#deploying-the-website-on-aws)
+  - [Using S3 and CloudFront](#using-s3-and-cloudfront)
+  - [Using Amplify](#using-amplify)
 
 ## Choosing a domain name
 I wanted to find a domain name that's both self-explanatory and easy to remember. My target was to have both my name and cloud in the URL and not pay to much for it (max 10-20$ / year). I came up with two valid options:
@@ -31,6 +34,8 @@ When you register a domain with Route 52, AWS automatically creates a public hos
 - An `NS` record poiting to the various AWS DNS servers
 - An `SOA` record poiting to the AWS root DNS server
 
+We'll be using CloudFront to serve the website so we'll need to add the relevant records when the time comes.
+
 ## Choosing a framework to host a static website
 I wanted something simple yet powerful and customizable. I came across the following in my research:
 - Hugo
@@ -41,13 +46,22 @@ I wanted something simple yet powerful and customizable. I came across the follo
 
 I ended up selecting Hugo for its simplicity, performance and numerous themes/plugins but to be honest given what I was going to do with it I could have chosen any of them and it would have done the job.
 
-## Skeleton
-RTFM
+## Installing and configuring Hugo
+
+There is no dirth of end-to-end guides to do so hence I will not include any detailed information.
+
+I personally used the following:
+- Hugo: https://gohugo.io/getting-started/installing/
+- Congo theme: https://jpanther.github.io/congo/docs/
 
 ## Deploying the website on AWS
 I wanted to take this opportunity to experiment with various AWS services so I decided to try deploying the website on multiple compute platforms meant for static websites, namely:
-- `Amazon S3` using Hugo Deploy (https://gohugo.io/hosting-and-deployment/hugo-deploy/)
-    - Follow hugo deploy
-    - Set up a CloudFront distribution (with the proper security features such as ACM, WAF and OAI) and a custom domain name
-    - Set up CD pipeline (CodeDeploy hooked to a Git web hook?)
-- `AWS Amplify` (https://gohugo.io/hosting-and-deployment/hosting-on-aws-amplify/)
+- `Amazon S3` along with `Amazon CloudFront`
+- `AWS Amplify`
+
+### Using S3 and CloudFront
+
+TBD
+
+### Using Amplify
+
