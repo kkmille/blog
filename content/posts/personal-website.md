@@ -61,8 +61,50 @@ I wanted to take this opportunity to experiment with various AWS services so I d
 
 ### Using S3 and CloudFront
 
+Deploying the website turned out to be a little more complicated than I thought, but it's still relatively simple. Hereunder the required steps:
+- Set up `AWS CodePipeline` and `AWS CodeBuild` to
+  - Connect to the git repo
+  - Start a new deployment when a code change happens
+  - Build the static pages from the code (example of buildspec file below)
+  - Deploy the new version of the static files to the S3 bucket
+- Invalidate the cache on new deployment to avoid stale posts (without having to lower the TTL to a useless level - you still want most assets to be cached for as long as possible)
+- Configure the `Amazon CloudFront` distribution
+  - Tasks 1
+  - Tasks 2
+
+The buildspec.yml file I used
+```toml
+version: 0.2
+ 
+phases:
+  install:
+    runtime-versions:
+      python: 3.10
+    commands:
+      - apt-get update
+      - echo Installing hugo
+      - curl -L -o hugo.deb https://github.com/gohugoio/hugo/releases/download/v0.101.0/hugo_0.101.0_Linux-64bit.deb
+      - dpkg -i hugo.deb
+  pre_build:
+    commands:
+      - echo In pre_build phase..
+      - echo Current directory is $CODEBUILD_SRC_DIR
+      - ls -la
+  build:
+    commands:
+      - hugo -v
+artifacts:
+  files:
+    - '**/*'
+  base-directory: public
+```
+
 Here is a simple diagram detailing the architecture and deployment pipeline
 ![Architecture diagram](/camille-cloud-blog.png)
+
+Sources:
+- Source 1
+- Source 2
 
 ### Using Amplify
 
