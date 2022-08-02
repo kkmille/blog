@@ -103,7 +103,7 @@ Here is a simple diagram detailing the architecture and deployment pipeline
 ![Architecture diagram](/camille-cloud-blog.png)
 
 Sources:
-- Source 1
+- [Source 1](https://simpleit.rocks/golang/hugo/deploying-a-hugo-website-to-aws-the-right-way/)
 - Source 2
 
 ### Using Amplify
